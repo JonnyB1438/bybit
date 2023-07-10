@@ -15,7 +15,7 @@ type FutureInverseFutureServiceI interface {
 	ListKline(ListKlineParam) (*ListKlineResponse, error)
 	Tickers(SymbolFuture) (*TickersResponse, error)
 	TradingRecords(TradingRecordsParam) (*TradingRecordsResponse, error)
-	Symbols() (*SymbolsResponse, error)
+	Symbols(SymbolFuture) (*SymbolsResponse, error)
 	MarkPriceKline(MarkPriceKlineParam) (*MarkPriceKlineResponse, error)
 	IndexPriceKline(IndexPriceKlineParam) (*IndexPriceKlineResponse, error)
 	OpenInterest(OpenInterestParam) (*OpenInterestResponse, error)

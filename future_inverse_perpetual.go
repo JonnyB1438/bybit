@@ -15,7 +15,7 @@ type FutureInversePerpetualServiceI interface {
 	ListKline(ListKlineParam) (*ListKlineResponse, error)
 	Tickers(SymbolFuture) (*TickersResponse, error)
 	TradingRecords(TradingRecordsParam) (*TradingRecordsResponse, error)
-	Symbols() (*SymbolsResponse, error)
+	Symbols(SymbolFuture) (*SymbolsResponse, error)
 	MarkPriceKline(MarkPriceKlineParam) (*MarkPriceKlineResponse, error)
 	IndexPriceKline(IndexPriceKlineParam) (*IndexPriceKlineResponse, error)
 	PremiumIndexKline(PremiumIndexKlineParam) (*PremiumIndexKlineResponse, error)

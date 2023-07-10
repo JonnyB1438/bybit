@@ -304,10 +304,11 @@ type LotSizeFilter struct {
 }
 
 // Symbols :
-func (s *FutureCommonService) Symbols() (*SymbolsResponse, error) {
+func (s *FutureCommonService) Symbols(symbol SymbolFuture) (*SymbolsResponse, error) {
 	var res SymbolsResponse
-
-	if err := s.client.getPublicly("/v2/public/symbols", nil, &res); err != nil {
+	query := url.Values{}
+	query.Add("symbol", string(symbol))
+	if err := s.client.getPublicly("/v2/public/symbols", query, &res); err != nil {
 		return nil, err
 	}
 

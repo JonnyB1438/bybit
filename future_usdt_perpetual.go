@@ -14,7 +14,7 @@ type FutureUSDTPerpetualServiceI interface {
 	OrderBook(SymbolFuture) (*OrderBookResponse, error)
 	ListLinearKline(ListLinearKlineParam) (*ListLinearKlineResponse, error)
 	Tickers(SymbolFuture) (*TickersResponse, error)
-	Symbols() (*SymbolsResponse, error)
+	Symbols(SymbolFuture) (*SymbolsResponse, error)
 	OpenInterest(OpenInterestParam) (*OpenInterestResponse, error)
 	BigDeal(BigDealParam) (*BigDealResponse, error)
 	AccountRatio(AccountRatioParam) (*AccountRatioResponse, error)
